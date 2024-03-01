@@ -9,6 +9,8 @@ public class Bullet : MonoBehaviour
 
     public float speed = 100f;
 
+    public int damage = 50;
+
     public GameObject impactEffect;
 
     public void Seek(Transform _enemy)
@@ -36,6 +38,18 @@ public class Bullet : MonoBehaviour
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
     }
 
+    void Damage(Transform enemy)
+    {
+        Enemy e = enemy.GetComponent<Enemy>();
+
+        if(e != null)
+        {
+            e.TakeDamage(damage);
+            
+        }
+
+        
+    }
     void HitTarget()
     {
         GameObject insEffect =  (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
