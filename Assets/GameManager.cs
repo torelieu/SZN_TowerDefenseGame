@@ -5,15 +5,24 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private bool gameEnded = false;
+    public static bool gameIsOver = false;
     [SerializeField]
     public GameObject gameOverUI;
     // Update is called once per frame
+
+    private void Start()
+    {
+        gameIsOver= false;
+    }
     void Update()
     {
-        if (gameEnded)
+        if (gameIsOver)
             return;
 
+        if (Input.GetKeyDown("e"))
+        {
+            EndGame();
+        }
 
         if (PlayerStats.Lives <= 0 )
         {
@@ -23,7 +32,7 @@ public class GameManager : MonoBehaviour
 
     private void EndGame()
     {
-        gameEnded = true;
+        gameIsOver = true;
         Debug.Log("Game Over!");
         gameOverUI.SetActive(true);
 
