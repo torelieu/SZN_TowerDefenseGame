@@ -6,7 +6,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private bool gameEnded = false;
-
+    [SerializeField]
+    public GameObject gameOverUI;
     // Update is called once per frame
     void Update()
     {
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour
     {
         gameEnded = true;
         Debug.Log("Game Over!");
+        gameOverUI.SetActive(true);
 
     }
 }
