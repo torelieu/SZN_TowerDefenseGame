@@ -1,36 +1,47 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
     public float speed = 10f;
 
-    public int health = 100;
+    public float startHealth = 100f;
+
+    private float health;
 
     public int value = 50;
 
     private Transform target;
     private int wavepointIndex = 0;
 
+    public Image healthBar;
+
     void Start()
     {
         Debug.Log("BUZ " + Waypoints.points[1]);
         target = Waypoints.points[0];
 
+        health = startHealth;
     }
 
-    public void TakeDamage(int amount)
+    public void TakeDamage(float amount)
     {
+        Debug.Log($"{ health} - {amount}");
         health -= amount;
+
+        healthBar.fillAmount = health / startHealth;
 
         if (health <= 0)
         {
+            Debug.Log("health " + health);
             Die();
         }
     }
 
-    private void Die()
+    public void Die()
     {
-        PlayerStats.Money += value;
+        Debug.Log("ASD");
+        PlayerStats.AddMoney(100);
         Destroy(gameObject);
     }
     void Update()
@@ -42,7 +53,6 @@ public class Enemy : MonoBehaviour
         if (Vector3.Distance(transform.position, target.position) <= 0.4f)
         {
             GetNextWaypoint();
-
         }
     }
 

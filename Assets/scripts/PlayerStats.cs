@@ -18,4 +18,10 @@ public class PlayerStats : MonoBehaviour
 
         Rounds = 0;
     }
+
+    public static void AddMoney(int money)
+    {
+        Money += money;
+        Debug.Log("New money:" + Money);
+    }
 }

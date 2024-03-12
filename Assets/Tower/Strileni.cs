@@ -9,6 +9,7 @@ public class Strileni : MonoBehaviour
 
     public float range = 10f;
     public float fireRate = 1f;
+    public float damage = 10f;
     private float fireCountdown = 0f;
 
     public GameObject bulletPrefab;
@@ -32,6 +33,7 @@ public class Strileni : MonoBehaviour
         if (fireCountdown <= 0f)
         {
             Shoot();
+            
             fireCountdown = 1f / fireRate;
         }
 
@@ -47,8 +49,11 @@ public class Strileni : MonoBehaviour
 
         if (bullet != null) 
         {
+            
             bullet.Seek(enemy);
         }
+
+        enemy.GetComponent<Enemy>().TakeDamage(damage);
     }
 
     void UpdateTarget()
