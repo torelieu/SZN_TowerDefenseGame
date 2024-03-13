@@ -278,7 +278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  health: 100
+  startHealth: 100
   value: 50
   healthBar: {fileID: 4164075619115891679}
 --- !u!4 &672416773995265808 stripped

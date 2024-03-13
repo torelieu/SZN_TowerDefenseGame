@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("BUZ " + Waypoints.points[1]);
+
         target = Waypoints.points[0];
 
         health = startHealth;
@@ -28,20 +28,18 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log($"{ health} - {amount}");
         health -= amount;
-
         healthBar.fillAmount = health / startHealth;
 
         if (health <= 0)
         {
-            Debug.Log("health " + health);
             Die();
         }
     }
 
     public void Die()
     {
-        Debug.Log("ASD");
-        PlayerStats.AddMoney(100);
+        Debug.Log("mrtvej");
+        PlayerStats.Money += value;
         Destroy(gameObject);
     }
     void Update()
