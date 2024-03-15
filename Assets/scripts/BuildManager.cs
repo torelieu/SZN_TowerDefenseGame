@@ -7,7 +7,7 @@ public class BuildManager : MonoBehaviour
 {
     public static BuildManager instance;
 
-    public int cena = 100;
+    public static int cena = 100;
 
     void Awake()
     {
@@ -34,6 +34,8 @@ public class BuildManager : MonoBehaviour
         if (PlayerStats.Money >= cena)
         {
             PlayerStats.Money -= cena;
+            cena += 100;
+            Debug.Log(cena);
             return turretToBuild;
         }
         else { 

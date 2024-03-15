@@ -2224,7 +2224,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45dfe79c2d3fd5046b9bb5922496172a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cena: 100
   standartTurretPrefab: {fileID: 9004508080909600442, guid: b8a6069dfa3f8ec4f956f6f0c436e786, type: 3}
 --- !u!114 &358943988
 MonoBehaviour:
@@ -7401,6 +7400,7 @@ GameObject:
   - component: {fileID: 1011228679}
   - component: {fileID: 1011228681}
   - component: {fileID: 1011228680}
+  - component: {fileID: 1011228682}
   m_Layer: 5
   m_Name: cena
   m_TagString: Untagged
@@ -7469,6 +7469,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1011228678}
   m_CullTransparentMesh: 1
+--- !u!114 &1011228682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011228678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 558ce6ed7f7c0c94aaa768e6023c8301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerCenaText: {fileID: 1011228680}
 --- !u!1 &1014712349
 GameObject:
   m_ObjectHideFlags: 0
