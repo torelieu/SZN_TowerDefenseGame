@@ -34,7 +34,7 @@ public class BuildManager : MonoBehaviour
         if (PlayerStats.Money >= cena)
         {
             PlayerStats.Money -= cena;
-            cena += 100;
+            cena += 50;
             Debug.Log(cena);
             return turretToBuild;
         }
