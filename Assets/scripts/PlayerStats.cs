@@ -18,6 +18,12 @@ public class PlayerStats : MonoBehaviour
 
         Rounds = 0;
     }
+    private void Update()
+    {
+        if (Input.GetKeyDown("M"))
+        {
+            Money += 100;
+        }
+    }
 
-    
 }
