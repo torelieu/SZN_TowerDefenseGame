@@ -40,9 +40,7 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log("mrtvej");
         PlayerStats.Money += value;
-
         Destroy(gameObject);
-
     }
     void Update()
     {
@@ -71,7 +69,6 @@ public class Enemy : MonoBehaviour
     void EndPath()
     {
         PlayerStats.Lives--;
-
         Destroy(gameObject);
     }
 

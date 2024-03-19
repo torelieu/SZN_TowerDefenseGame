@@ -10879,6 +10879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f84f011d97faf7948b5788fd4300ce14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   waves:
   - enemy: {fileID: 152902290954528170, guid: a3e88d07ac1c04c4e875010d784e5c41, type: 3}
     count: 2
@@ -10898,8 +10899,11 @@ MonoBehaviour:
   - enemy: {fileID: 2006322377505170475, guid: 88f11da42ce80b94280791379117b0c7, type: 3}
     count: 5
     rate: 2
+=======
+  enemyPrefab: {fileID: 152902290954528170, guid: a3e88d07ac1c04c4e875010d784e5c41, type: 3}
+>>>>>>> parent of baf2d2d (s)
   spawnPoint: {fileID: 1148265714}
-  timeBetweenWaves: 10.5
+  timeBetweenWaves: 5.5
   waveCountdownText: {fileID: 905600703}
 --- !u!4 &358943986
 Transform:
@@ -10942,7 +10946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startMoney: 300
-  startLives: 5
+  startLives: 20
 --- !u!114 &358943989
 MonoBehaviour:
   m_ObjectHideFlags: 0
