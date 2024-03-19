@@ -8,6 +8,10 @@ public class GameManager : MonoBehaviour
     public static bool gameIsOver = false;
     [SerializeField]
     public GameObject gameOverUI;
+
+    public static bool gameIsWin = false;
+    [SerializeField]
+    public GameObject gameWinUI;
     // Update is called once per frame
 
     private void Start()
@@ -28,6 +32,11 @@ public class GameManager : MonoBehaviour
         {
             EndGame();
         }
+
+        if(Input.GetKeyDown("w")) 
+        {
+            WinGame();
+        }
     }
 
     private void EndGame()
@@ -35,6 +44,13 @@ public class GameManager : MonoBehaviour
         gameIsOver = true;
         Debug.Log("Game Over!");
         gameOverUI.SetActive(true);
+
+    }
+
+    private void WinGame()
+    {
+        gameIsWin = true;
+        gameWinUI.SetActive(true);
 
     }
 }
